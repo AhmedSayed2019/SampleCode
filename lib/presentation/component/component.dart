@@ -67,12 +67,8 @@ export 'images/custom_person_image.dart';
 export 'inputs/custom_text_field_area.dart';
 export 'inputs/custom_text_field_email.dart';
 export 'inputs/custom_text_field_normal.dart';
-export 'inputs/custom_text_field_numeric.dart';
 export 'inputs/custom_text_field_password.dart';
 export 'inputs/custom_text_field_phone.dart';
-export 'inputs/custom_text_field_search.dart';
-export 'inputs/custom_text_field_phone_code.dart';
 export 'inputs/custom_text_field_date.dart';
-export 'inputs/custom_text_field_link.dart';
 
 

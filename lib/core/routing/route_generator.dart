@@ -1,5 +1,4 @@
 import 'package:base_app/presentation/modules/auth/auth_types/auth_screen.dart';
-import 'package:base_app/presentation/modules/intro/intro/intro_screen.dart';
 import 'package:base_app/presentation/modules/intro/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,6 @@ class RouteBaseGenerator {
     switch (settings.name) {
       ///Intro
       case Routes.splashScreen:return platformPageRoute(const SplashScreen());
-      case Routes.introScreen:return platformPageRoute(const IntroScreen());
 
 
       ///Auth

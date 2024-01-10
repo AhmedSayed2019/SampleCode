@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      title: 'Ellujinize',
+      title: 'Ahmed Sayed',
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigationService.navigationKey,
       initialRoute: Routes.splashScreen,

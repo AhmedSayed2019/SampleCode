@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:base_app/domain/parameters/suggestions_and_complaints_parameters.dart';
 import 'package:dio/dio.dart';
 
 import '../../domain/repository/setting_repo.dart';

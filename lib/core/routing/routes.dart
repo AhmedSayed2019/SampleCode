@@ -2,7 +2,6 @@ class Routes {
 
   ///intro
   static const String splashScreen = "/";
-  static const String introScreen = "/introScreen";
 
 
   ///Auth

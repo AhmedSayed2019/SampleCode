@@ -1,7 +1,6 @@
 
 import 'dart:convert';
 
-import 'package:base_app/core/utils/constants.dart';
 import 'package:base_app/domain/logger.dart';
 import 'package:base_app/domain/parameters/auth/login_parameters.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -39,16 +38,6 @@ class LocalRepositoryImp implements LocalRepository {
     return await _cacheConsumer.save(StorageKeys.kIsAuthed, true) ;
   }
 
-  @override
-  Future<bool> saveUserType(UserType userType) async {
-    return await _cacheConsumer.save(StorageKeys.kUserType, userType.name);
-  }
-
-  @override
-  Future<UserType> getUserType() async {
-    String type =  await _cacheConsumer.get(StorageKeys.kUserType)??'';
-   return getUserTypeByKey(type);
-  }
   @override
   Future<String> getUserToken() async {
 

@@ -48,7 +48,7 @@
 
 
     <application
-        android:label="ahmedSayed"
+        android:label="Ahmed Sayed"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
