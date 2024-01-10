@@ -119,7 +119,7 @@ class CustomButtonArrow extends StatelessWidget {
 
                           Expanded(
                             child: Text(
-                              value ?? '',
+                              tr(value ?? ''),
                               style:  label==null? Theme.of(context).inputDecorationTheme.hintStyle: Theme.of(context).inputDecorationTheme.labelStyle,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 1,

@@ -8,6 +8,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:base_app/core/extensions/num_extensions.dart';
 import 'package:base_app/data/model/base/response_model.dart';
+import 'package:number_paginator/number_paginator.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../../../generated/locale_keys.g.dart';
@@ -92,27 +93,47 @@ class _CountriesScreenState extends State<CountriesScreen> {
                   ),
                 ),
                 VerticalSpace(kFormPaddingAllLarge.h),
-                SizedBox(
-                  height: 32.h,
-                  child: CustomListAnimatorData(
-                    itemCount: responseModel?.data?.pagination.totalPages,
-                    scrollDirection:Axis.horizontal ,
-                      horizontalSpace: kFormPaddingAllSmall.w,
-                    itemBuilder: (context, index) => TapEffect(
-                      onTap: ()=>_getData(context, index+1),
-                      child: Container(
-                        height: 32.r,
-                        width: 32.r,
-                        alignment: Alignment.center,
-                        decoration: const BoxDecoration().borderStyle().radius().customColor((currentPage==(index+1))?Theme.of(context).primaryColor:null),
-                        child: (isLoading&& currentPage==(index+1))? CustomLoadingSpinner(color: Colors.white,size: 24.r,):Text(
-                          (index+1).toString(),
-                          style: const TextStyle().semiBoldStyle().customColor(currentPage==(index+1)?Colors.white:null),
-                        ),
-                      ),
-                    ),
+                NumberPaginator(
+                  // initialPage:currentPage-1,
+                  numberPages: responseModel?.data?.pagination.totalPages??0,
+                  nextButtonContent: Center(child: Icon(Icons.keyboard_double_arrow_right,color: Theme.of(context).hintColor,)),
+                  prevButtonContent: Center(child: Icon(Icons.keyboard_double_arrow_left,color: Theme.of(context).hintColor)),
+
+                  config: NumberPaginatorUIConfig(
+                    // default height is 48
+                    height: 36.r,
+
+                    buttonShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(kFormRadiusSmall)),
+
+                    buttonSelectedForegroundColor: Colors.white,
+                    buttonUnselectedForegroundColor: Colors.black,
+                    buttonUnselectedBackgroundColor:  Theme.of(context).highlightColor,
+                    buttonSelectedBackgroundColor: Theme.of(context).primaryColor,
+
                   ),
+                  onPageChange: (int index) => _getData(context, index+1),
                 ),
+                // SizedBox(
+                //   height: 32.h,
+                //   child: CustomListAnimatorData(
+                //     itemCount: responseModel?.data?.pagination.totalPages,
+                //     scrollDirection:Axis.horizontal ,
+                //       horizontalSpace: kFormPaddingAllSmall.w,
+                //     itemBuilder: (context, index) => TapEffect(
+                //       onTap: ()=>_getData(context, index+1),
+                //       child: Container(
+                //         height: 32.r,
+                //         width: 32.r,
+                //         alignment: Alignment.center,
+                //         decoration: const BoxDecoration().borderStyle().radius().customColor((currentPage==(index+1))?Theme.of(context).primaryColor:null),
+                //         child: (isLoading&& currentPage==(index+1))? CustomLoadingSpinner(color: Colors.white,size: 24.r,):Text(
+                //           (index+1).toString(),
+                //           style: const TextStyle().semiBoldStyle().customColor(currentPage==(index+1)?Colors.white:null),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

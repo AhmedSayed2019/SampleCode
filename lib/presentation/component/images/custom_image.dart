@@ -116,7 +116,7 @@ class CustomImage extends StatelessWidget {
 
   _buildPlaceholder(BuildContext context) {
     return _showPlaceholder
-        ?  _onAttachImage != null?Container(
+        ?  _onAttachImage != null?SizedBox(
             height: _height,
             width: _width ?? deviceWidth,
             // padding: EdgeInsets.all(kScreenPaddingNormal.r),

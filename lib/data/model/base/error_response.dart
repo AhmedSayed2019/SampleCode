@@ -18,8 +18,14 @@ class ErrorResponse {
 
   ErrorResponse.fromJson(dynamic json) {
     _errors = [];
-    log('Errors', 'Error ${json["data"].toString()}');
-
+    // log('Errors', 'Error ${json["error"].toString()}');
+    if (json["error"] != null) {
+      try{
+        _errors!.add(Errors('error', json['error']["message"]));
+        _message = json['error']["message"];
+        log('Errors', 'Error ${json['error']["message"]}');
+      }catch(v){}
+    }else
     if (json["errors"] != null) {
       if (json["errors"] is String) {
         _message = json["data"];
@@ -57,6 +63,8 @@ class ErrorResponse {
       _errors!.add(Errors('error', json["message"]));
       log('Errors', 'Error ${json["message"]}');
     }
+
+
   }
 
   Map<String, dynamic> toJson() {

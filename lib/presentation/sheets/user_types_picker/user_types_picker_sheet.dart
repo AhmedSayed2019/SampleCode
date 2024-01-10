@@ -96,23 +96,23 @@ class __DependencyPickerSheetState extends State<_DependencyPickerSheet> {
           );
   }
 
-  Widget _buildMultiChoiceItem(BuildContext context, List<String?>? selectedDependencyIds, DependencyEntity model) {
+  Widget _buildMultiChoiceItem(BuildContext context, List<String?>? selectedDependencyIds, DependencyEntity entity) {
     return CheckboxListTile(
-      value: selectedDependencyIds!.contains(model.id),
-      onChanged: (b) => _viewModel.onItemChecked(isChecked: b!, selectedItem: model),
-      title: Text(model.name, style: const TextStyle().regularStyle().colorBlack()),
+      value: selectedDependencyIds!.contains(entity.id),
+      onChanged: (b) => _viewModel.onItemChecked(isChecked: b!, selectedItem: entity),
+      title: Text(tr(entity.name), style: const TextStyle().regularStyle().colorBlack()),
     );
   }
 
 
-  Widget _buildSingleChoiceItem(BuildContext context, DependencyEntity? selectedItem, DependencyEntity model) {
+  Widget _buildSingleChoiceItem(BuildContext context, DependencyEntity? selectedItem, DependencyEntity entity) {
     return RadioListTile<String>(
       groupValue: selectedItem?.id,
-      title: Text(model.name, style: const TextStyle().regularStyle().colorBlack()),
-      value: model.id,
-      onChanged: (value) {
-        _viewModel.onSelected(model);
-      },
+      title: Text(tr(entity.name), style: const TextStyle().regularStyle().colorBlack()),
+      value: entity.id,
+      onChanged: (value) =>
+        _viewModel.onSelected(entity)
+      ,
     );
   }
 }

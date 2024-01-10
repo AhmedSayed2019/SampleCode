@@ -100,7 +100,7 @@ class ApiChecker {
   }
 
   static _showAlert(String? error,bool showError ) {
-    if (error != null && showError) Alerts.showSnackBar(error);
+    if (error != null && showError) Alerts.showSnackBar(tr(error));
   }
   static _onLogout() {
     if (appContext ==null) {return;}

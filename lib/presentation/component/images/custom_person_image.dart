@@ -82,8 +82,8 @@ class CustomPersonImage extends StatelessWidget {
               bottom: 0,
               right: 0,
               child: Container(
-                height: 40,
-                width: 40,
+                height: 32,
+                width: 32,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(width: 4, color: Theme.of(context).scaffoldBackgroundColor,),
@@ -93,12 +93,18 @@ class CustomPersonImage extends StatelessWidget {
                   color: Colors.transparent,
                   child: InkWell(
                     onTap: () async {
-                      String? path = await onPickImagesPressed(context);
-                      if (path != null && _onAttachImage != null) {_onAttachImage!(path);}
+                      showSelectAttachImageMethod(context, onAttachImage: (path){
+                        if (_onAttachImage != null) {_onAttachImage!(path);}
+                      });
+
+
+                      // String? path = await onPickImagesPressed(context);
+                      // if (path != null && _onAttachImage != null) {_onAttachImage!(path);}
                     },
                     borderRadius: BorderRadius.circular(100),
                     child: const Icon(
                       Icons.edit,
+                      size: 20,
                       color: Colors.white,
                     ),
                   ),
