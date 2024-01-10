@@ -42,9 +42,6 @@ class Assets {
   static const String fontsPoppinsRegular = 'assets/fonts/PoppinsRegular.ttf';
   static const String fontsPoppinsSemiBold = 'assets/fonts/PoppinsSemiBold.ttf';
   static const String fontsPoppinsThin = 'assets/fonts/PoppinsThin.ttf';
-  static const String gifDone = 'assets/images/gif/done.json';
-  static const String gifEmptyList = 'assets/images/gif/empty_list.gif';
-  static const String gifPaySuccessfully = 'assets/images/gif/pay_successfully.gif';
   static const String iconsAddImageIcon = 'assets/images/svg/icons/add_image_icon.svg';
   static const String iconsAddressIcon = 'assets/images/svg/icons/address_icon.svg';
   static const String iconsAppleIcon = 'assets/images/svg/icons/apple_icon.svg';

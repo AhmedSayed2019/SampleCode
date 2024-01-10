@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,7 +50,7 @@ class NoDataScreen extends StatelessWidget {
             ),
           const VerticalSpace(kFormPaddingHorizontal),
 
-          AutoSizeText(
+          Text(
             _title??tr( LocaleKeys.noResultFound),
             style: const TextStyle().regularStyle().colorBlack(),
             textAlign: TextAlign.center,

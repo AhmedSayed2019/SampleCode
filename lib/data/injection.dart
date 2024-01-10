@@ -14,7 +14,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/services/local/cache_consumer.dart';
 import '../core/services/network/api_consumer.dart';
-import '../core/services/network/network_info.dart';
 import '../domain/repository/local_repo.dart';
 import 'app_urls/app_url.dart';
 import 'datasource/remote/dio/dio_client.dart';
@@ -46,7 +45,6 @@ Future<void> initBaseData() async {
   getIt.registerLazySingleton(() => Dio());
   getIt.registerLazySingleton(() => LoggingInterceptor());
   getIt.registerLazySingleton(() => const FlutterSecureStorage());
-  getIt.registerLazySingleton(() => NetworkInfo(getIt()));
   getIt.registerLazySingleton(() => CacheConsumer(secureStorage: getIt() ,sharedPreferences: getIt()));
 
 

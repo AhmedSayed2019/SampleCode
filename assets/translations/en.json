@@ -14,8 +14,6 @@
   "skip": "Skip",
   "start": "Start",
   "popularServices": "Popular Services",
-
-
   "hangOnAnAdminWillApproveYourAccountShortly": "Hang on !\n An admin will approve your account shortly.",
   "links": "Links",
   "endingSoon": "Ending Soon",
@@ -106,7 +104,7 @@
   "capital": "Capital",
   "name": "Name",
   "userName": "Name",
-  "countries": "countries",
+  "countries": "Countries",
   "password": "Password",
   "noRatingYet": "No Rating Yet",
   "selectHint": "-- select --",
