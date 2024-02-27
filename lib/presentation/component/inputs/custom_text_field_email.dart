@@ -1,11 +1,8 @@
-import 'package:base_app/core/extensions/num_extensions.dart';
 import 'package:base_app/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../generated/assets.dart';
-import '../svg_icon.dart';
 import 'base_form.dart';
 
 class CustomTextFieldEmail extends StatelessWidget {

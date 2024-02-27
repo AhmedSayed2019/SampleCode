@@ -26,17 +26,17 @@ void main() async {
   runApp(
       GenerateMultiProvider(
         child: EasyLocalization(
-            supportedLocales: const [Locale('en')],
+            supportedLocales:  _supportedLocales,
             path: 'assets/translations',
             // if device language not supported
-            fallbackLocale: const Locale('en'),
+            fallbackLocale: _supportedLocales.first,
             saveLocale: true,
             useOnlyLangCode: true,
-            startLocale: const Locale('en'),
+            startLocale:_supportedLocales.first,
             child:  const MyApp()),
       ));
 }
 
-// final supportedLocales = <Locale>[
-//   const Locale('en'),
-// ];
+final _supportedLocales = <Locale>[
+  const Locale('en'),
+];

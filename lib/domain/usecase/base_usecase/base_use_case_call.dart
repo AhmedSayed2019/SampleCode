@@ -22,9 +22,9 @@ class BaseUseCaseCall<R>{
         if (kDebugMode) {
           _log(tag,'getData kDebugMode');
           try{
-            if(showSuccess) Alerts.showSnackBar(baseModel.responseData[0],alertsType: AlertsType.success);
+            if(showSuccess) Alerts.showSnackBar(baseModel.message,alertsType: AlertsType.success);
           }catch(e){
-            if(showSuccess) Alerts.showSnackBar(tr(LocaleKeys.createdSuccessfully),alertsType: AlertsType.success);
+            if(showSuccess) Alerts.showSnackBar(tr(LocaleKeys.successfully),alertsType: AlertsType.success);
           }
           responseModel = onConvert(baseModel);
         } else{

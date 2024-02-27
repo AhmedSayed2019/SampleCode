@@ -39,6 +39,7 @@ Future<void> initBasePresentation() async {
   getIt.registerLazySingleton(() => LoginViewModel(saveUserDataUseCase: getIt(),rememberMeHelper: getIt(),signInUseCase: getIt()));
   getIt.registerLazySingleton(() => RegisterViewModel(registerUseCase:  getIt(),getDependenciesUseCase:  getIt()));
 
+  ///Other
   getIt.registerLazySingleton(() => CustomerLayoutViewModel());
   getIt.registerLazySingleton(() => CustomerHomeViewModel());
   getIt.registerLazySingleton(() => CountriesViewModel(getCountriesUseCase: getIt()));
