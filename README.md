@@ -14,11 +14,14 @@ Simple steps you **should follow whenever** you developing  the Mobile App
 
 ## Screenshots
 
-|Upcoming Launches|Past Launches|Launch Detail|       
+|Auth|Login|Regiser|       
 |:---:|:---:|:---:|
 |![](screenshots/auth_type.jpeg?raw=true)|![](screenshots/login.jpeg?raw=true)|![](screenshots/register_step_one.jpeg?raw=true)|
 
 
+|Profile|Countries|Services|       
+|:---:|:---:|:---:|
+|![](screenshots/profile.jpeg?raw=true)|![](screenshots/countries.jpeg?raw=true)|![](screenshots/services.jpeg?raw=true)|
 ## Install
 
 ```
