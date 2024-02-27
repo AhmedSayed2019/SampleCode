@@ -1,4 +1,4 @@
-# Space X Mobile App Guideline
+# Sample of my code
 
 Simple steps you **should follow whenever** you developing  the Mobile App
 
