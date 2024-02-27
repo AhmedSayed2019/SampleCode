@@ -119,9 +119,8 @@ class _RegisterStepTwoState extends State<RegisterStepTwo> {
       child: Column (
 
         children: [
-          CustomPersonImage(onAttachImage: _viewModel.onUpdateImage,canEdit: true,imageUrl: parameters.image ,size: 70.r,error: imageError),
+          CustomPersonImage(onAttachImage: _viewModel.onUpdateImage,canEdit: true,imageUrl: parameters.image ,size: 76.r,error: imageError),
 
-          VerticalSpace(kScreenPaddingNormal.h),
 
           VerticalSpace(kScreenPaddingNormal.h),
           CustomTextFieldArea(label: tr(LocaleKeys.about),controller: _aboutController,textInputAction: TextInputAction.next,defaultValue:parameters.about),

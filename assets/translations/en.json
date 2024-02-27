@@ -7,11 +7,15 @@
   "whoAmI": "Who Am I",
 
   "popularServices": "Popular Services",
+  "invalid_credentials": "Invalid Email or password",
   "hangOnAnAdminWillApproveYourAccountShortly": "Hang on !\n An admin will approve your account shortly.",
   "links": "Links",
   "endingSoon": "Ending Soon",
   "successfully": "Successfully",
   "pictures": "Pictures",
+  "buyer": "Buyer",
+  "seller": "Seller",
+  "both": "Both",
   "waitingForPicturesToUpload": "Waiting for pictures to upload",
 
   "pleaseLoginFirst": "Please login first",

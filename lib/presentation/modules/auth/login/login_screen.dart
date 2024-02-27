@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
     bool isLoading = context.watch<LoginViewModel>().isLoading;
 
     return CustomScaffold(
-      appBar: const CustomAppBar(isBackButtonExist: false),
+      appBar:  CustomAppBar(title: tr(LocaleKeys.login),),
       body: Padding(
         padding: const EdgeInsets.all(kScreenPaddingNormal),
         child: CustomListAnimator(
