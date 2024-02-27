@@ -5,7 +5,6 @@ Simple steps you **should follow whenever** you developing  the Mobile App
 - [Platform](#platform)
 - [Branches](#branches)
 - [Screenshots](#screenshots)
-- [Install](#install)
 - [Issues](#issues)
     - [Available Labels](#available-labels)
 
@@ -20,26 +19,6 @@ Simple steps you **should follow whenever** you developing  the Mobile App
 |Profile|Countries|Services|       
 |:---:|:---:|:---:|
 |![](screenshots/profile.jpeg?raw=true)|![](screenshots/countries.jpeg?raw=true)|![](screenshots/services.jpeg?raw=true)|
-## Install
-
-```
-$ flutter pub get
-```
-```
-$ flutter pub run flutter_launcher_icons:main
-```
-```
-$ flutter pub run flutter_native_splash:create
-```
-```
-$ flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-```
-$ flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-```
-$ flutter run  --dart-define=FLAVOR=development --target lib/main.dart
-```
 
 # Architecture Proposal
 ![Architecture Proposal](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course/blob/master/architecture-proposal.png?raw=true)
