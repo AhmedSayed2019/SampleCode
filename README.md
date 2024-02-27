@@ -12,8 +12,6 @@ Simple steps you **should follow whenever** you developing  the Mobile App
 ## Screenshots
 
 
-## Screenshots
-
 |Auth|Login|Regiser|       
 |:---:|:---:|:---:|
 |![](screenshots/auth_type.jpeg?raw=true)|![](screenshots/login.jpeg?raw=true)|![](screenshots/register_step_one.jpeg?raw=true)|
